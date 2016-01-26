@@ -3,3 +3,4 @@
 
 A standalone version of the OSX color picker
 
+Built version is under dist/
