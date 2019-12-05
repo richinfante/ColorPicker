@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -15,9 +16,9 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="ColorPicker" id="1Xt-HY-uBw">
+                <menuItem title="Color Picker" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="ColorPicker" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="Color Picker" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
                             <menuItem title="About ColorPicker" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -28,7 +29,7 @@
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Open Color Pallete Folder" keyEquivalent="O" id="UWX-VG-LyW">
                                 <connections>
-                                    <action selector="openPalleteFolder:" target="Voe-Tx-rLC" id="dAd-Fa-Pc5"/>
+                                    <action selector="openPalleteFolderWithSender:" target="Voe-Tx-rLC" id="ZnW-3A-0Cf"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -53,6 +54,86 @@
                             <menuItem title="Quit ColorPicker" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="Rww-2D-wwf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="6sb-f5-pXt">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="uB3-bQ-5T9">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="rZL-1g-Tv4"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="q06-xN-WL8">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="JUW-15-Bro"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="7Y7-7J-fIL"/>
+                            <menuItem title="Cut" keyEquivalent="x" id="lQh-rC-Y5h">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="Xgw-DG-mqK"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="BWx-wi-D2w">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="kGS-CY-yud"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="aGp-rZ-qLv">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="8or-WA-3aD"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste and Match Style" keyEquivalent="V" id="A7O-dQ-pIl">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="pasteAsPlainText:" target="-1" id="kWo-ub-dex"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="SLs-p7-7NK">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="delete:" target="-1" id="JBd-Qa-jNl"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="DCL-nD-wcG">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="yZp-3m-52o"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="l7Q-zW-pg9">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Window" systemMenu="window" id="Q3C-0U-9OL">
+                        <items>
+                            <menuItem title="Close Window" keyEquivalent="w" id="qse-dK-DgL">
+                                <connections>
+                                    <action selector="closeWindow" target="Voe-Tx-rLC" id="P0b-7t-G9m"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Minimize" keyEquivalent="m" id="WZV-qv-esj">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="if7-Nl-Hhb"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="kfF-Y6-Opi">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="Xls-hD-4eu"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Vcr-j3-npt"/>
+                            <menuItem title="Bring All to Front" id="4lW-dO-2d8">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="hKf-bU-AdF"/>
                                 </connections>
                             </menuItem>
                         </items>

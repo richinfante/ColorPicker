@@ -11,7 +11,6 @@
 		13FB66A21ADD6BE600A619DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13FB66A11ADD6BE600A619DC /* Images.xcassets */; };
 		13FB66A51ADD6BE600A619DC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13FB66A31ADD6BE600A619DC /* MainMenu.xib */; };
 		13FB66B11ADD6BE600A619DC /* ColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB66B01ADD6BE600A619DC /* ColorPickerTests.swift */; };
-		13FB66BB1ADD6DB000A619DC /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB66BA1ADD6DB000A619DC /* ColorPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +32,6 @@
 		13FB66AA1ADD6BE600A619DC /* ColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FB66AF1ADD6BE600A619DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13FB66B01ADD6BE600A619DC /* ColorPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerTests.swift; sourceTree = "<group>"; };
-		13FB66BA1ADD6DB000A619DC /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				13FB669F1ADD6BE600A619DC /* AppDelegate.swift */,
-				13FB66BA1ADD6DB000A619DC /* ColorPicker.swift */,
 				13FB66A11ADD6BE600A619DC /* Images.xcassets */,
 				13FB66A31ADD6BE600A619DC /* MainMenu.xib */,
 				13FB669D1ADD6BE600A619DC /* Supporting Files */,
@@ -160,6 +157,8 @@
 				TargetAttributes = {
 					13FB66991ADD6BE600A619DC = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 7A264T7MNQ;
+						ProvisioningStyle = Automatic;
 					};
 					13FB66A91ADD6BE600A619DC = {
 						CreatedOnToolsVersion = 6.3;
@@ -172,6 +171,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -211,7 +211,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13FB66A01ADD6BE600A619DC /* AppDelegate.swift in Sources */,
-				13FB66BB1ADD6DB000A619DC /* ColorPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,11 +328,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7A264T7MNQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -341,11 +345,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7A264T7MNQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
